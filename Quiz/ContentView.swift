@@ -27,6 +27,7 @@ var questions = [
     var body: some View {
         ZStack{
             Color.purple
+                .frame(width: 100000, height: 100000)
         VStack {
             ProgressView(value: Double(currentQuestion),
                                      total: Double(questions.count))
