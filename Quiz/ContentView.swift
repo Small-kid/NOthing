@@ -39,6 +39,9 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            ProgressView(value: Double(currentQuestion),
+                                     total: Double(questions.count))
+                            .padding()
             Text(questions[currentQuestion].title)
                 .padding()
             
