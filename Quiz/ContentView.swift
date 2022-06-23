@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    //i did a thing
 var questions = [
     Question(title: "Where does the Paw Patrol live?", option1: "Rescue Bay", option2: "Foggy Bottoms", option3: "Adventure Bay", option4: "Meriden", image: "q1", correctOption: 3),
         Question(title: "What's the name of the Mayor?", option1: "Mayor Goodway", option2: "Mayor Alex", option3: "Mayor Jeff", option4: "Mayor Mickey", image: "q2", correctOption: 1),
