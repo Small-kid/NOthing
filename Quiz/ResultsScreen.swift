@@ -17,8 +17,9 @@ struct ResultsScreen: View {
             CircularProgressView(progress: CGFloat(score) /
              CGFloat(totalQuestions))
              .frame(width: 150, height: 150)
-            Text("You got")
+            Text("Congrats! You got")
             Text("\(score)/\(totalQuestions)")
+            Text("Rocky is proud of you!")
         }
     }
 }
