@@ -9,24 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var questions = [Question(title: "What day is it?",
-                              option1: "Monday",
-                              option2: "Friday",
-                              option3: "Wednesday",
-                              option4: "Saturday",
-                              correctOption: 4),
-                     Question(title: "What framework are we using?",
-                              option1: "UIKit",
-                              option2: "SwiftUI",
-                              option3: "React Native",
-                              option4: "Flutter",
-                              correctOption: 2),
-                     Question(title: "Which company created Swift?",
-                              option1: "Apple",
-                              option2: "Orange",
-                              option3: "Google",
-                              option4: "Tinkercademy",
-                              correctOption: 1)]
+var questions = [
+    Question(title: "Where does the Paw Patrol live?", option1: "Rescue Bay", option2: "Foggy Bottoms", option3: "Adventure Bay", option4: "Meriden", image: "q1", correctOption: 3),
+        Question(title: "What's the name of the Mayor?", option1: "Mayor Goodway", option2: "Mayor Alex", option3: "Mayor Jeff", option4: "Mayor Mickey", image: "q2", correctOption: 1),
+        Question(title: "What kind of pet does Mayor Goodway have?", option1: "Dog", option2: "Chicken" , option3: "Horse", option4: "Cat", image: "q3", correctOption: 2),
+        Question(title: "Which pup hates the water?", option1: "Zoomer", option2: "Skye", option3: "Rubble", option4: "Rocky", image: "q4", correctOption: 3)
+    ]
     
     @State var currentQuestion = 0
     
@@ -44,25 +32,37 @@ struct ContentView: View {
                             .padding()
             Text(questions[currentQuestion].title)
                 .padding()
-            
             HStack {
                 VStack {
-                    Button(questions[currentQuestion].option1) {
-                        didTapOption(optionNumber: 1)
-                    }
-                    Button(questions[currentQuestion].option2) {
+                        Button {
+                            didTapOption(optionNumber: 1)
+                        }label: {
+                            Image(systemName: "circle.fill")
+                            Text(questions[currentQuestion].option1)
+                        }
+                        Image(systemName: "square.fill")
+                            .foregroundColor(.blue)
+                    Button {
                         didTapOption(optionNumber: 2)
+                    }label: {
+                        Image(systemName: "square.fill")
+                        Text(questions[currentQuestion].option2)
                     }
                 }
                 .padding()
                 VStack {
-                    Button(questions[currentQuestion].option3) {
+                    Button {
                         didTapOption(optionNumber: 3)
+                    }label: {
+                        Image(systemName: "triangle.fill")
+                        Text(questions[currentQuestion].option3)
                     }
-                    Button(questions[currentQuestion].option4) {
+                    Button {
                         didTapOption(optionNumber: 4)
-                    }
-                }
+                    }label: {
+                        Image(systemName: "diamond.fill")
+                        Text(questions[currentQuestion].option4)
+                    }                }
                 .padding()
             }
             .padding()
@@ -70,7 +70,7 @@ struct ContentView: View {
         .alert(isPresented: $isAlertPresented) {
             
             Alert(title: Text(isCorrect ? "Correct" : "Wrong"),
-                  message: Text(isCorrect ? "Congrats, you are kinda smart." : "This is outrageous, with such easy questions, how can you be getting this wrong?!"),
+                  message: Text(isCorrect ? "Congrats comrade, the state thanks your contribution to *our* progress." : "You disappointing failure."),
                   dismissButton: .default(Text("OK")) {
                     currentQuestion += 1
                     
