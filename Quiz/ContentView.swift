@@ -40,26 +40,26 @@ var questions = [
                         }label: {
                             Image(systemName: "circle.fill")
                             Text(questions[currentQuestion].option1)
+                                .font(.system(size: 17))
+                                .frame(width: 120)
+                                .padding()
+                                .background(Color.green)
+                                .foregroundColor(.white)
+                                .cornerRadius(10)
                         }
-                        .font(.system(size: 17))
-                        .frame(width: 120)
-                        .padding()
-                        .background(Color.red)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
                     
                     Button {
                         didTapOption(optionNumber: 2)
                     }label: {
                         Image(systemName: "square.fill")
                         Text(questions[currentQuestion].option2)
+                            .font(.system(size: 17))
+                            .frame(width: 120)
+                            .padding()
+                            .background(Color.green)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
                     }
-                    .font(.system(size: 17))
-                    .frame(width: 120)
-                    .padding()
-                    .background(Color.yellow)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
                 }
                 .padding()
                 VStack {
@@ -68,26 +68,26 @@ var questions = [
                     }label: {
                         Image(systemName: "triangle.fill")
                         Text(questions[currentQuestion].option3)
+                            .font(.system(size: 17))
+                            .frame(width: 120)
+                            .padding()
+                            .background(Color.green)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
                     }
-                    .font(.system(size: 17))
-                    .frame(width: 120)
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    
                     Button {
                         didTapOption(optionNumber: 4)
                     }label: {
                         Image(systemName: "diamond.fill")
                         Text(questions[currentQuestion].option4)
+                            .font(.system(size: 17))
+                            .frame(width: 120)
+                            .padding()
+                            .background(Color.green)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
                     }
-                    .font(.system(size: 17))
-                    .frame(width: 120)
-                    .padding()
-                    .background(Color.green)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
+                    
                 }
                 .padding()
             }
