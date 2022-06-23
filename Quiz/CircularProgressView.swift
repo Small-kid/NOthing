@@ -21,6 +21,7 @@ struct CircularProgressView: View {
                 .stroke(style: .init(lineWidth:20.0, lineCap: .round ,
                     lineJoin: .round))
                 .foregroundColor(.blue)
+                .rotationEffect(Angle(degrees: 270))
         }
     }
 }

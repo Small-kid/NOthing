@@ -17,7 +17,7 @@ struct ResultsScreen: View {
             CircularProgressView(progress: CGFloat(score) /
              CGFloat(totalQuestions))
              .frame(width: 150, height: 150)
-            Text("You got")
+            Text("Congrats! You got")
             Text("\(score)/\(totalQuestions)")
             if score == 0 {
                 Text("Aww man go google a link to watch paw patrol free online (pirating ahem)")
